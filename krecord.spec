@@ -8,7 +8,7 @@ Group:		Applications/Sound
 Source:		ftp://ftp.kde.org:/pub/kde/stable/1.1.1/apps/multimedia/sound/%{name}-%{version}.tar.gz
 BuildRequires:	qt-devel >= 1.42
 BuildRequires:	kdesupport-devel
-Buildroot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 A simple KDE interface to record sounds.
