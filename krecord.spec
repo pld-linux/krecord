@@ -23,7 +23,7 @@ export QTDIR=%{kdeprefix}
 	--prefix=%{kdeprefix} \
 	--with-install-root=$RPM_BUILD_ROOT \
 	--disable-path-check
-make CXXFLAGS="$RPM_OPT_FLAGS -DNO_DEBUG -I/usr/include/qt" KDEDIR=%{kdeprefix}
+%{__make} CXXFLAGS="$RPM_OPT_FLAGS -DNO_DEBUG -I/usr/include/qt" KDEDIR=%{kdeprefix}
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -32,7 +32,7 @@ export QTDIR=$RPM_BUILD_ROOT%{kdeprefix}
 install -d $RPM_BUILD_ROOT%{kdeprefix}/bin
 install -d $RPM_BUILD_ROOT%{kdeprefix}/share/applnk/Multimedia
 
-make install prefix=$RPM_BUILD_ROOT%{kdeprefix}
+%{__make} install prefix=$RPM_BUILD_ROOT%{kdeprefix}
 
 cd $RPM_BUILD_ROOT
 find . -type d | sed '1,2d;s,^\.,\%attr(-\,root\,root) \%dir ,' > \
