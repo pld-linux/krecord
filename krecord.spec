@@ -1,13 +1,13 @@
 Summary:	Sound recorder for KDE
 Name:		krecord
-Version:	1.1
+Version:	1.4
 Release:	1
 Epoch:		1
 License:	GPL
 Group:		Applications/Sound
 Group(de):	Applikationen/Laut
 Group(pl):	Aplikacje/D¼wiêk
-Source:		ftp://ftp.kde.org:/pub/kde/stable/1.1.1/apps/multimedia/sound/%{name}-%{version}.tar.gz
+Source0:	ftp://ftp.kde.org/pub/kde/Attic/old/1.1.2/apps/multimedia/sound/%{name}-%{version}.tar.gz
 BuildRequires:	qt-devel >= 1.42
 BuildRequires:	kdesupport-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
