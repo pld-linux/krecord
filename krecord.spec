@@ -1,14 +1,14 @@
 Summary:	Sound recorder for KDE
 Summary(pl):	Rejestrator d¼wiêku dla KDE
 Name:		krecord
-Version:	1.9
+Version:	1.11
 Release:	1
 Epoch:		1
 License:	GPL
 Group:		X11/Applications/Multimedia
 Source0:	http://bytesex.org/misc/%{name}_%{version}.tar.gz
 URL:		http://bytesex.org/krecord.html
-BuildRequires:	kdelibs-devel >= 2.0
+BuildRequires:	kdelibs-devel >= 3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
