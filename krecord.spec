@@ -6,8 +6,6 @@ Release:	1
 Epoch:		1
 License:	GPL
 Group:		X11/Applications/Multimedia
-Group(de):	X11/Applikationen/Multimedia
-Group(pl):	X11/Aplikacje/Multimedia
 Source0:	http://bytesex.org/misc/%{name}_%{version}.tar.gz
 URL:		http://bytesex.org/krecord.html
 BuildRequires:	kdelibs-devel >= 2.0
