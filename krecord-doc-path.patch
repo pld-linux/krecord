@@ -1,0 +1,12 @@
+diff -urN krecord-1.15.1.orig/kdedirs krecord-1.15.1/kdedirs
+--- krecord-1.15.1.orig/kdedirs	2004-01-04 13:45:09.000000000 +0000
++++ krecord-1.15.1/kdedirs	2004-09-07 00:15:50.826364808 +0000
+@@ -21,7 +21,7 @@
+ if test "$value" = ""; then
+ 	# use defaults
+ 	case "$item" in
+-	html)	value="${prefix}/share/doc/HTML" ;;
++	html)	value="${prefix}/share/doc/kde/HTML" ;;
+ 	apps)	value="${prefix}/share/applnk"	;;
+ 	data)	value="${prefix}/share/apps"	;;
+ 	esac
