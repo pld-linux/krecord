@@ -1,31 +1,20 @@
-%define kdeprefix /usr
-%define version 1.1
-%define release 1
-%define sourcedir stable/1.1.1/apps/multimedia/sound
-
-%define qtver  qt >= 1.42
-
-%define kdename  krecord
-Name: %{kdename}
-Summary: Sound recorder for KDE
-Version: %{version}
-Release: %{release}
-Serial: 1
-#Source: ftp://ftp.kde.org:/pub/kde/%{sourcedir}/%{kdename}-%{version}.tar.gz
-Source: %{kdename}-%{version}.tar.gz
-License: GPL
-Group: Applications/Sound
-Buildroot: /var/tmp/%{kdename}-buildroot
-Requires: %{qtver} kdesupport
-Prefix: %{kdeprefix}
+Summary:	Sound recorder for KDE
+Name:		krecord
+Version:	1.1
+Release:	1
+Serial:		1
+License:	GPL
+Group:		Applications/Sound
+Source:		ftp://ftp.kde.org:/pub/kde/stable/1.1.1/apps/multimedia/sound/%{name}-%{version}.tar.gz
+BUildPrereq:	qt-devel >= 1.42
+BUildPrereq:	kdesupport-devel
+Buildroot:	/tmp/%{name}-%{version}-root
 
 %description
 A simple KDE interface to record sounds.
 
 %prep
-rm -rf $RPM_BUILD_ROOT
-
-%setup -q -n %{kdename}
+%setup -q -n %{name}
 
 %build
 export KDEDIR=%{kdeprefix}
@@ -37,6 +26,7 @@ export QTDIR=%{kdeprefix}
 make CXXFLAGS="$RPM_OPT_FLAGS -DNO_DEBUG -I/usr/include/qt" KDEDIR=%{kdeprefix}
 
 %install
+rm -rf $RPM_BUILD_ROOT
 export KDEDIR=$RPM_BUILD_ROOT%{kdeprefix}
 export QTDIR=$RPM_BUILD_ROOT%{kdeprefix}
 install -d $RPM_BUILD_ROOT%{kdeprefix}/bin
@@ -57,7 +47,7 @@ find . -type l | sed 's,^\.,\%attr(-\,root\,root) ,' >> \
         $RPM_BUILD_DIR/file.list.%{kdename}
 
 %clean
-rm -rf $RPM_BUILD_ROOT $RPM_BUILD_DIR/file.list.%{kdename}
+rm -rf $RPM_BUILD_ROOT
 
 %files -f ../file.list.%{kdename}
 
