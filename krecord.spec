@@ -5,7 +5,7 @@ Version:	1.11
 Release:	2
 Epoch:		1
 License:	GPL
-Group:		X11/Applications/Multimedia
+Group:		X11/Applications/Sound
 Source0:	http://bytesex.org/misc/%{name}_%{version}.tar.gz
 URL:		http://bytesex.org/krecord.html
 BuildRequires:	kdelibs-devel >= 3.0.3
