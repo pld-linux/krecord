@@ -7,6 +7,7 @@ Epoch:		1
 License:	GPL
 Group:		X11/Applications/Sound
 Source0:	http://bytesex.org/misc/%{name}_%{version}.tar.gz
+# Source0-md5: c2909ee20bec437fb4c33053e8bbbc3c
 URL:		http://bytesex.org/krecord.html
 BuildRequires:	kdelibs-devel >= 3.0.3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
