@@ -39,8 +39,6 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	BUILDROOT=$RPM_BUILD_ROOT
 
-gzip -9nf Changes README
-
 %find_lang %{name} --with-kde --all-name
 
 %clean
@@ -48,7 +46,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc *.gz
+%doc Changes README
 %attr(755,root,root) %{_bindir}/krecord
 %{_applnkdir}/Multimedia/krecord.kdelnk
 %{_datadir}/apps/krecord
