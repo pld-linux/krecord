@@ -6,8 +6,8 @@ Serial:		1
 License:	GPL
 Group:		Applications/Sound
 Source:		ftp://ftp.kde.org:/pub/kde/stable/1.1.1/apps/multimedia/sound/%{name}-%{version}.tar.gz
-BUildPrereq:	qt-devel >= 1.42
-BUildPrereq:	kdesupport-devel
+BuildRequires:	qt-devel >= 1.42
+BuildRequires:	kdesupport-devel
 Buildroot:	/tmp/%{name}-%{version}-root
 
 %description
