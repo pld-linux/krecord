@@ -50,7 +50,3 @@ find . -type l | sed 's,^\.,\%attr(-\,root\,root) ,' >> \
 rm -rf $RPM_BUILD_ROOT
 
 %files -f ../file.list.%{kdename}
-
-%changelog
-* Thu May 27 1999 Gerald Teschl <gerald@esi.ac.at>
-- Created
