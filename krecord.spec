@@ -34,7 +34,7 @@ kde_htmldir="%{_htmldir}"; export kde_htmldir
 #CXXFLAGS="%{rpmcflags} %{!?debug:-DNO_DEBUG} -I%{_includedir}/qt"
 CFLAGS="%{rpmcflags}"; export CFLAGS
 
-%{__make} 
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
