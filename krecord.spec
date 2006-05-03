@@ -1,13 +1,13 @@
 Summary:	Sound recorder for KDE
 Summary(pl):	Rejestrator d¼wiêku dla KDE
 Name:		krecord
-Version:	1.15.1
+Version:	1.16
 Release:	1
 Epoch:		1
 License:	GPL
 Group:		X11/Applications/Sound
-Source0:	http://dl.bytesex.org/releases/krecord/%{name}_%{version}.tar.gz
-# Source0-md5:	6673074a813cda1298366adf48618cd5
+Source0:	http://dl.bytesex.org/releases/krecord/%{name}-%{version}.tar.gz
+# Source0-md5:	d0b4b0d981bf1c4a3872423b8d4b4b1d
 Source1:	%{name}.desktop
 patch0:		%{name}-doc-path.patch
 URL:		http://bytesex.org/krecord.html
@@ -31,9 +31,7 @@ Prosty interfejs KDE do rejestrowania d¼wiêku.
 KDEDIR="%{_prefix}"; export KDEDIR
 QTDIR="%{_prefix}"; export QTDIR
 kde_htmldir="%{_htmldir}"; export kde_htmldir
-#CXXFLAGS="%{rpmcflags} %{!?debug:-DNO_DEBUG} -I%{_includedir}/qt"
 CFLAGS="%{rpmcflags}"; export CFLAGS
-
 %{__make}
 
 %install
@@ -46,6 +44,7 @@ install -d $RPM_BUILD_ROOT%{_desktopdir}
 install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 
 %find_lang %{name} --with-kde --all-name
+rm -f $RPM_BUILD_ROOT%{_datadir}/applnk/Multimedia/krecord.desktop
 
 %clean
 rm -rf $RPM_BUILD_ROOT
