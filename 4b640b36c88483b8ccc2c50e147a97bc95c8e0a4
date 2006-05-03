@@ -1,0 +1,2 @@
+- Group changed to X11/Applications/Multimedia, prefix to /usr/X11R6
+- TODO: rewrite %files
