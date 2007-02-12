@@ -1,5 +1,5 @@
 Summary:	Sound recorder for KDE
-Summary(pl):	Rejestrator d¼wiêku dla KDE
+Summary(pl.UTF-8):   Rejestrator dÅºwiÄ™ku dla KDE
 Name:		krecord
 Version:	1.16
 Release:	1
@@ -20,8 +20,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 A simple KDE interface to record sounds.
 
-%description -l pl
-Prosty interfejs KDE do rejestrowania d¼wiêku.
+%description -l pl.UTF-8
+Prosty interfejs KDE do rejestrowania dÅºwiÄ™ku.
 
 %prep
 %setup -q
