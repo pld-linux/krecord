@@ -1,5 +1,5 @@
 Summary:	Sound recorder for KDE
-Summary(pl.UTF-8):   Rejestrator dźwięku dla KDE
+Summary(pl.UTF-8):	Rejestrator dźwięku dla KDE
 Name:		krecord
 Version:	1.16
 Release:	1
