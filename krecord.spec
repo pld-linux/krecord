@@ -9,7 +9,7 @@ Group:		X11/Applications/Sound
 Source0:	http://dl.bytesex.org/releases/krecord/%{name}-%{version}.tar.gz
 # Source0-md5:	d0b4b0d981bf1c4a3872423b8d4b4b1d
 Source1:	%{name}.desktop
-patch0:		%{name}-doc-path.patch
+Patch0:		%{name}-doc-path.patch
 URL:		http://bytesex.org/krecord.html
 BuildRequires:	gettext-devel
 BuildRequires:	kdelibs-devel >= 3.0.3
