@@ -11,7 +11,7 @@ Source0:	http://dl.bytesex.org/releases/krecord/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
 Patch0:		%{name}-doc-path.patch
 URL:		http://bytesex.org/krecord.html
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	kdelibs-devel >= 3.0.3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
