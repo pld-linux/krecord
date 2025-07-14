@@ -25,7 +25,7 @@ Prosty interfejs KDE do rejestrowania dźwięku.
 
 %prep
 %setup -q
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 KDEDIR="%{_prefix}"; export KDEDIR
